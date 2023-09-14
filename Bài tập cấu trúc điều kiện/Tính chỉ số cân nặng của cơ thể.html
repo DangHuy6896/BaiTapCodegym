@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tính chỉ số cân nặng</h1>
+    <table>
+        <tr>
+            <td><label for="">Cân nặng:</label></td>
+            <td><input type="text" name="" id="input1"> (kg)</td>
+        </tr>
+        <tr>
+            <td><label for="">Chiều cao:</label></td>
+            <td><input type="text" name="" id="input2"> (m)</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button id="" onclick="BMI()">Kiểm tra</button></td>
+        </tr>
+    </table>
+    <p id="ketqua"></p>
+    <script>
+        function BMI() {
+            let A = parseFloat(document.getElementById('input1').value);
+            let B = parseFloat(document.getElementById('input2').value);
+            let R = A/(B*B);
+            let Result = R; 
+
+            if (R >= 30) {
+                Result = 'Chỉ số BMI của bạn là: ' + R + '. ' + 'Bạn đang béo phì.';
+            } else {
+                if (R >= 25) {
+                    Result = 'Chỉ số BMI của bạn là: ' + R + '. ' + 'Bạn đang thừa cân.';
+                } else {
+                    if (R >= 18.5) {
+                        Result = 'Chỉ số BMI của bạn là: ' + R + '. ' + 'Bạn bình thường.';
+                    } else {
+                        Result = 'Chỉ số BMI của bạn là: ' + R + '. ' + 'Bạn đang thiếu cân.';
+                    }
+                }
+            }
+        
+            document.getElementById("ketqua").innerHTML = Result;
+        }    
+    </script>
+</body>
+</html>

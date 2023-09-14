@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="sothang">
+    <button onclick="sc()">Tính số ngày</button>
+    <p id="hienthi"></p>
+    
+    
+    <script>
+        function sc() {
+            let thang = document.getElementById('sothang').value;
+            
+            switch (thang) {
+                case '1':
+                case '3':
+                case '5':
+                case '7':
+                case '8':
+                case '10':
+                case '12':
+                    document.getElementById('hienthi').innerHTML = "Tháng " + thang + " có 31 ngày";
+                    break;
+                case '4':
+                case '6':
+                case '9':
+                case '11':
+                    document.getElementById('hienthi').innerHTML = "Tháng " + thang + " có 30 ngày";
+                    break;
+                case '2':
+                    document.getElementById('hienthi').innerHTML = "Tháng " + thang + " có 28 ngày hoặc 29 ngày";
+                    break;
+                default:
+                    document.getElementById('hienthi').innerHTML = "Tháng này không tồn tại";
+            }       
+        }
+    </script>
+</body>
+
+</html>

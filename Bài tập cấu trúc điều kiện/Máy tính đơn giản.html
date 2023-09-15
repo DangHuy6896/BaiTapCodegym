@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <table>
+        <tr><td colspan="4"><input type="text" name="" id="ohienthi" style="width: 96%;"></td></tr>
+        <tr>
+            <td><button style="width: 40px;" value="1" onclick="inputmath(this.value)">1</button></td>
+            <td><button style="width: 40px;" value="2" onclick="inputmath(this.value)">2</button></td>
+            <td><button style="width: 40px;" value="3" onclick="inputmath(this.value)">3</button></td>
+            <td><button style="width: 40px;" value="+" onclick="inputmath(this.value)">+</button></td>
+        </tr>
+        <tr>
+            <td><button style="width: 40px;" value="4" onclick="inputmath(this.value)">4</button></td>
+            <td><button style="width: 40px;" value="5" onclick="inputmath(this.value)">5</button></td>
+            <td><button style="width: 40px;" value="6" onclick="inputmath(this.value)">6</button></td>
+            <td><button style="width: 40px;" value="-" onclick="inputmath(this.value)">-</button></td>
+        </tr>
+        <tr>
+            <td><button style="width: 40px;" value="7" onclick="inputmath(this.value)">7</button></td>
+            <td><button style="width: 40px;" value="8" onclick="inputmath(this.value)">8</button></td>
+            <td><button style="width: 40px;" value="9" onclick="inputmath(this.value)">9</button></td>
+            <td><button style="width: 40px;" value="*" onclick="inputmath(this.value)">*</button></td>
+        </tr>
+        <tr>
+            <td><button style="width: 40px;" onclick="reset()">C</button></td>
+            <td><button style="width: 40px;" value="0" onclick="inputmath(this.value)">0</button></td>
+            <td><button style="width: 40px;" onclick="result()">=</button></td>
+            <td><button style="width: 40px;" value="/" onclick="inputmath(this.value)">/</button></td>
+        </tr>        
+    </table>
+    <script>
+        let bieuthuc = document.getElementById('ohienthi');
+        function inputmath(value){
+            bieuthuc.value += value;
+        }
+        function result(){
+            let result = eval(bieuthuc.value);
+            bieuthuc.value = result;
+        }
+        function reset(){
+            bieuthuc.value = "";
+        }
+        
+        /*
+        let bieuthuc = document.getElementById('ohienthi').value;
+        function inputmath(value){
+            bieuthuc += value;
+        }
+        function result(){
+            let result = eval(bieuthuc);
+            bieuthuc = result;
+        }
+        function reset(){
+            bieuthuc = "";
+        } 
+        */
+    </script>
+</body>
+</html>

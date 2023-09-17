@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array1 = [];
+        let array2 = [];
+        let x = parseInt(prompt('Bạn muốn hiển thị bao nhiêu số nguyên tố đầu tiên?'))
+        
+        for (i=2; i<10000; i++) {
+            for (j=1; j<=i; j++) {
+                if (i%j==0) {
+                    array2.push(j);
+                }                       
+            }
+            if (array2.length == 2) {
+                    array1.push(i);
+            }
+            array2.splice(0, array2.length);     
+            if (array1.length == x) {                
+                for (let element in array1) {
+                    document.write(array1[element] + '<br>');
+                }
+                break;                
+            }
+        } 
+    </script>
+</body>
+</html>

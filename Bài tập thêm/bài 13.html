@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let array1 = [23, 45, 86, -234, -678, 43, 7, 23, 72, -19, 71];
+        let array2 = [7, 5, -11, 31, 2];
+        function deleteNegativenumber(array) {
+            let arrayf = [];
+            for (i = 0; i < array.length; i++) {
+                if (array[i] % 2 == 1 || array[i] % 2 == -1) {
+                    arrayf.push(array[i]);
+                }
+            }
+            return arrayf;
+        }
+        console.log(deleteNegativenumber(array1));
+        console.log(deleteNegativenumber(array2));
+    </script>
+</body>
+
+</html>

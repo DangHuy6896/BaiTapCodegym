@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let array1 = [23, 23, 86, -234, -678, 45, 7, 23, 72, -19, 71];
+        let array2 = [7, 5, -11, 31, 7];
+
+        function deleteElementsame(arr) {
+            for (i = 0; i < arr.length - 1; i++) {
+                for (j = i + 1; j < arr.length; j++) {
+                    if (arr[i] == arr[j]) {
+                        arr.splice(j, 1);
+                        j--;
+                    }
+                }
+            }
+            return arr;
+        }
+        console.log(deleteElementsame(array1));
+        console.log(deleteElementsame(array2));
+    </script>
+</body>
+
+</html>

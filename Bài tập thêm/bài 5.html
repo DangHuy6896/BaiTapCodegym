@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let array1 = [23, 45, 86, 234, 678, 43, 7, 23, 72, 19, 71];
+        let array2 = [8, 7, 6, 5, 4, 3, 2, 1];
+        function checkAscending(array) {
+            for (i = 0, j = 1; i < (array.length - 1), j < array.length; i++, j++) {
+                if ((array[i] - array[j]) <= 0) {
+                    return "mảng không giảm dần";
+                }
+            } 
+            if (j = array.length) {
+                return "mảng giảm dần";
+            }
+        }
+        console.log(checkAscending(array1));
+        console.log(checkAscending(array2));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let array1 = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+        let array2 = [3, 5, 2, 5, 7, 4, 567, 2, 45, 0]
+        function checkArraycdxk(array) {
+            for (i = 0, j = (array.length - 1); i < array.length, j > 0; i++, j--) {
+                if (i > j && array[i] == array[j]) {
+                    return 1;
+                    break;
+                }
+                if (i <= j && array[i] != array[j]) {
+                    return 0;
+                    break;
+                }
+            }
+        }
+        console.log(checkArraycdxk(array1));
+        console.log(checkArraycdxk(array2));
+    </script>
+</body>
+
+</html>

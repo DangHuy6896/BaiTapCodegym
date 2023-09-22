@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="input">
+    <button onclick="check()">Kiểm tra</button>
+    <p id="result"></p>
+    <script>
+        function check() {
+            let arrayInput = ["dog", "cat", "chicken", "duck", "pig"];
+            let arrayResult = ["chó", "mèo", "gà", "vịt", "heo"];
+            let x = document.getElementById("input").value;
+            
+            for (i = 0; i < arrayInput.length; i++) {
+                if (arrayInput[i] == x) {
+                    document.getElementById("result").innerHTML = arrayResult[i];
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
